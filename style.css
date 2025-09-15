@@ -1,0 +1,88 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #f0f4f8;
+  background: url('bg2.jpg') center/cover no-repeat;
+  margin: 0;
+  padding: 20px;
+  color: #fff
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #f4f4fafe;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #313238;
+  border: 2px solid #278ccf;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #47e2e5;
+}
+
+#status, #scoreboard {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #fff
+}
+
+button#restart {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: #1a666e;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+}
+
+button#restart:hover {
+  background-color: #47e2e5;
+}
+
+@media (max-width: 500px) {
+  #game {
+    grid-template-columns: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
+#mode {
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 1rem;
+}
+.cell.win {
+  background-color: #4CAF50;
+  color: white;
+  animation: blink 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  from { background-color: #4CAF50; }
+  to { background-color: #66bb6a; }
+}
